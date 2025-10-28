@@ -1,18 +1,18 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="ko">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>电子名片 — YOUR_FULL_NAME</title>
+  <title>한금진 — 전자명함</title>
   <style>
     :root{--bg:#f7f7fb;--card:#ffffff;--accent:#0b6efd;--muted:#6b7280}
-    body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans CJK SC",Roboto,Arial; margin:0; background:var(--bg); color:#111}
+    body{font-family:"Noto Sans KR",system-ui,-apple-system,"Segoe UI",Roboto,Arial; margin:0; background:var(--bg); color:#111}
     .wrap{max-width:720px;margin:36px auto;padding:20px;}
     .card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 24px rgba(15,23,42,0.06)}
     .top{display:flex;gap:16px;align-items:center}
     .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6c5ce7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px}
-    h1{margin:0;font-size:20px}
-    .title{color:var(--muted);font-size:14px;margin-top:6px}
+    h1{margin:0;font-size:22px}
+    .title{color:var(--muted);font-size:15px;margin-top:6px}
     .bio{margin:14px 0 18px;color:#222;line-height:1.45}
     .links{display:flex;flex-wrap:wrap;gap:10px}
     .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;text-decoration:none;background:#f3f4f6;border:1px solid #ececec;color:#111;font-size:14px}
@@ -29,66 +29,54 @@
   <div class="wrap">
     <div class="card" id="card">
       <div class="top">
-        <div class="avatar" id="avatar">YK</div>
+        <div class="avatar" id="avatar">HJ</div>
         <div style="flex:1">
-          <h1 id="fullName">YOUR_FULL_NAME</h1>
-          <div class="title" id="role">YOUR_TITLE • YOUR_ORG</div>
-          <div class="small" id="location">YOUR_LOCATION</div>
-        </div>
-        <div style="text-align:right">
-          <a class="btn" id="websiteLink" href="#" target="_blank" rel="noopener">🔗 网站</a>
+          <h1 id="fullName">한금진 / Han Jinzhen</h1>
+          <div class="title" id="role">박사후연구원 • 성균관대학교 공학연구원</div>
+          <div class="small" id="location">Suwon, Korea</div>
         </div>
       </div>
 
-      <p class="bio" id="bio">
-        在这里写一段简短的个人简介，1-2 行即可。比如研究方向、当前职位、联系方式说明等。
+      <p class="bio">
+        성균관대학교 공학연구원 박사후연구원으로 재직 중입니다.  
+        인공지능 기반 원격탐사 및 도시 공간정보 연구를 수행하고 있습니다.
       </p>
 
       <div class="contact-grid">
         <div>
-          <div class="small">📞 01096301666</div>
-          <div><a id="telLink" class="btn" href="tel:+821012345678">+82 10-1234-5678</a></div>
+          <div class="small">📞 전화번호</div>
+          <div><a id="telLink" class="btn" href="tel:01096301666">010-9630-1666</a></div>
         </div>
         <div>
-          <div class="small">✉️ </div>
-          <div><a id="emailLink" class="btn" href="mailto:you@example.com">you@example.com</a></div>
+          <div class="small">✉️ 이메일</div>
+          <div><a id="emailLink" class="btn" href="mailto:geumjin99@g.skku.edu">geumjin99@g.skku.edu</a></div>
         </div>
 
         <div>
           <div class="small">🐙 GitHub</div>
-          <div><a id="githubLink" class="btn" href="https://github.com/geumjin99" target="_blank" rel="noopener">github.com/YOUR_GITHUB</a></div>
+          <div><a id="githubLink" class="btn" href="https://github.com/geumjin99" target="_blank" rel="noopener">github.com/geumjin99</a></div>
         </div>
         <div>
-          <div class="small">🔗 ResearchGate</div>
-          <div><a id="linkedinLink" class="btn" href="https://www.researchgate.net/profile/Han_Jinzhen" target="_blank" rel="noopener">linkedin.com/in/YOUR_LINKEDIN</a></div>
-        </div>
-
-        <div style="grid-column:1 / -1">
-          <div class="small">📁 其他链接</div>
-          <div class="links" id="otherLinks">
-            <!-- 可以放更多按钮 -->
-            <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
-            <a class="btn" href="https://YOUR-PERSONAL-SITE" target="_blank" rel="noopener">个人主页</a>
-          </div>
+          <div class="small">🔬 ResearchGate</div>
+          <div><a id="rgLink" class="btn" href="https://www.researchgate.net/profile/Han_Jinzhen" target="_blank" rel="noopener">researchgate.net/profile/Han_Jinzhen</a></div>
         </div>
       </div>
 
-      <div class="actions" style="margin-top:14px">
-        <button id="downloadVcard" class="btn primary">📇 导出/保存到通讯录 (vCard)</button>
-        <a id="rawVcard" class="btn" download="contact.vcf" href="#">直接下载 .vcf</a>
-        <a id="shareBtn" class="btn" href="#" onclick="navigator.share && navigator.share({title:document.title, url:location.href}).catch(()=>{});return false;">📤 分享此卡片</a>
+      <div class="actions" style="margin-top:16px">
+        <button id="downloadVcard" class="btn primary">📇 연락처 저장 (vCard)</button>
+        <a id="rawVcard" class="btn" download="Han_Jinzhen.vcf" href="#">.vcf 다운로드</a>
       </div>
 
       <div style="text-align:center;margin-top:18px">
-        <div class="small">扫描二维码用手机打开此页面</div>
+        <div class="small">📱 QR 코드를 스캔하면 이 명함을 바로 열 수 있습니다</div>
         <div id="qrcode"></div>
-        <div class="small" style="margin-top:8px;color:var(--muted)">或访问：<span id="shortUrl">—</span></div>
+        <div class="small" style="margin-top:8px;color:var(--muted)">URL: <span id="shortUrl">—</span></div>
       </div>
-
     </div>
 
     <footer>
-      提示：在 iPhone/Safari 下点击“导出/保存到通讯录”后系统会提示直接添加联系人；Android 会下载 .vcf 文件，打开后可导入通讯录。
+      iPhone에서는 “연락처 저장”을 누르면 바로 추가 가능하며,  
+      Android에서는 .vcf 파일이 다운로드되어 연락처 앱에서 불러올 수 있습니다.
     </footer>
   </div>
 
@@ -96,99 +84,69 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 
   <script>
-    // ====== 在这里填写你的信息（替换占位符） ======
     const profile = {
-      fullName: "YOUR_FULL_NAME",
-      givenName: "YOUR_GIVEN_NAME", // 名 (可选)
-      familyName: "YOUR_FAMILY_NAME", // 姓 (可选)
-      org: "YOUR_ORG",
-      title: "YOUR_TITLE",
-      tel: "+821012345678",
-      email: "you@example.com",
-      website: "https://YOUR_PERSONAL_SITE",
-      github: "https://github.com/YOUR_GITHUB",
-      linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN",
-      location: "Seoul, Korea",
-      note: "研究 & 开发 | 联系请注明来意"
+      fullName: "한금진 / Han Jinzhen",
+      givenName: "금진",
+      familyName: "한",
+      org: "성균관대학교 공학연구원",
+      title: "박사후연구원",
+      tel: "+821096301666",
+      email: "geumjin99@g.skku.edu",
+      github: "https://github.com/geumjin99",
+      researchgate: "https://www.researchgate.net/profile/Han_Jinzhen",
+      location: "Suwon, Korea",
+      note: "AI 기반 원격탐사 및 도시공간정보 연구"
     };
 
-    // ====== 页面填充 ======
-    document.getElementById('fullName').textContent = profile.fullName;
-    document.getElementById('role').textContent = (profile.title || "") + (profile.org ? (" • " + profile.org) : "");
-    document.getElementById('location').textContent = profile.location || "";
-    document.getElementById('bio').textContent = profile.note || "";
-    document.getElementById('avatar').textContent = (profile.givenName ? profile.givenName[0] : profile.fullName[0]) + (profile.familyName ? profile.familyName[0] : "");
-    document.getElementById('websiteLink').href = profile.website;
-    document.getElementById('telLink').href = "tel:" + profile.tel;
-    document.getElementById('telLink').textContent = profile.tel;
-    document.getElementById('emailLink').href = "mailto:" + profile.email;
-    document.getElementById('emailLink').textContent = profile.email;
-    document.getElementById('githubLink').href = profile.github;
-    document.getElementById('linkedinLink').href = profile.linkedin;
-
-    // ====== 生成 vCard 字符串 ======
-    function makeVCard(p) {
-      // vCard 3.0 简单示例
-      const lines = [
+    function makeVCard(p){
+      const lines=[
         "BEGIN:VCARD",
         "VERSION:3.0",
-        `N:${p.familyName || ""};${p.givenName || ""};;;`,
+        `N:${p.familyName};${p.givenName};;;`,
         `FN:${p.fullName}`,
-        p.org ? `ORG:${p.org}` : "",
-        p.title ? `TITLE:${p.title}` : "",
-        p.tel ? `TEL;TYPE=CELL:${p.tel}` : "",
-        p.email ? `EMAIL;TYPE=INTERNET:${p.email}` : "",
-        p.website ? `URL:${p.website}` : "",
-        p.location ? `LABEL:${p.location}` : "",
-        p.note ? `NOTE:${p.note}` : "",
+        `ORG:${p.org}`,
+        `TITLE:${p.title}`,
+        `TEL;TYPE=CELL:${p.tel}`,
+        `EMAIL;TYPE=INTERNET:${p.email}`,
+        `URL:${p.github}`,
+        `URL:${p.researchgate}`,
+        `LABEL:${p.location}`,
+        `NOTE:${p.note}`,
         "END:VCARD"
-      ].filter(Boolean).join("\r\n");
-      return lines;
+      ];
+      return lines.join("\r\n");
     }
 
-    // ====== 创建并设置下载链接（data URL） ======
-    function vCardDataUrl(vcardStr) {
-      // encodeURIComponent 可确保特殊字符安全
-      return "data:text/vcard;charset=utf-8," + encodeURIComponent(vcardStr);
+    function vCardDataUrl(str){
+      return "data:text/vcard;charset=utf-8," + encodeURIComponent(str);
     }
 
-    const vcardStr = makeVCard(profile);
-    const downloadLink = document.getElementById('rawVcard');
-    downloadLink.href = vCardDataUrl(vcardStr);
-    downloadLink.setAttribute('download', (profile.fullName || "contact") + ".vcf");
+    const vStr = makeVCard(profile);
+    document.getElementById('rawVcard').href = vCardDataUrl(vStr);
 
-    // ====== 绑定导出按钮（更友好的触发：创建 Blob 并触发下载） ======
-    document.getElementById('downloadVcard').addEventListener('click', function(){
-      const blob = new Blob([vcardStr], {type: "text/vcard;charset=utf-8"});
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = (profile.fullName || "contact") + ".vcf";
+    document.getElementById('downloadVcard').addEventListener('click',()=>{
+      const blob=new Blob([vStr],{type:"text/vcard;charset=utf-8"});
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download="Han_Jinzhen.vcf";
       document.body.appendChild(a);
       a.click();
       a.remove();
       URL.revokeObjectURL(url);
     });
 
-    // ====== 生成二维码，内容为当前页面的 URL ======
-    function makeQRCode(text) {
-      const container = document.getElementById('qrcode');
-      container.innerHTML = "";
-      new QRCode(container, {
-        text: text,
-        width: 160,
-        height: 160,
-        colorDark : "#000000",
-        colorLight : "#ffffff",
-        correctLevel : QRCode.CorrectLevel.H
-      });
-    }
-
+    // QR 코드 생성
     const currUrl = location.href;
-    makeQRCode(currUrl);
     document.getElementById('shortUrl').textContent = currUrl;
-
-    // 如果你想把二维码导出为图片，可以在此加按钮并使用 canvas -> toDataURL
+    new QRCode(document.getElementById('qrcode'),{
+      text:currUrl,
+      width:160,
+      height:160,
+      colorDark:"#000000",
+      colorLight:"#ffffff",
+      correctLevel:QRCode.CorrectLevel.H
+    });
   </script>
 </body>
 </html>
