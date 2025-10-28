@@ -66,11 +66,7 @@
         <a id="rawVcard" class="btn" download="Han_Jinzhen.vcf" href="#">.vcf 다운로드</a>
       </div>
 
-      <div style="text-align:center;margin-top:18px">
-        <div class="small">📱 QR 코드를 스캔하면 이 명함을 바로 열 수 있습니다</div>
-        <div id="qrcode"></div>
-        <div class="small" style="margin-top:8px;color:var(--muted)">URL: <span id="shortUrl">—</span></div>
-      </div>
+  
     </div>
 
     <footer>
@@ -135,17 +131,7 @@
       URL.revokeObjectURL(url);
     });
 
-    // QR 코드 생성
-    const currUrl = location.href;
-    document.getElementById('shortUrl').textContent = currUrl;
-    new QRCode(document.getElementById('qrcode'),{
-      text:currUrl,
-      width:160,
-      height:160,
-      colorDark:"#000000",
-      colorLight:"#ffffff",
-      correctLevel:QRCode.CorrectLevel.H
-    });
+
   </script>
 </body>
 </html>
