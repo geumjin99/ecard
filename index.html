@@ -1,210 +1,387 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!doctype html>
+
+<html lang="zh-CN">
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2575.7">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+
+  <meta charset="utf-8" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>电子名片 — YOUR_FULL_NAME</title>
+
+  <style>
+
+    :root{--bg:#f7f7fb;--card:#ffffff;--accent:#0b6efd;--muted:#6b7280}
+
+    body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans CJK SC",Roboto,Arial; margin:0; background:var(--bg); color:#111}
+
+    .wrap{max-width:720px;margin:36px auto;padding:20px;}
+
+    .card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 24px rgba(15,23,42,0.06)}
+
+    .top{display:flex;gap:16px;align-items:center}
+
+    .avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6c5ce7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px}
+
+    h1{margin:0;font-size:20px}
+
+    .title{color:var(--muted);font-size:14px;margin-top:6px}
+
+    .bio{margin:14px 0 18px;color:#222;line-height:1.45}
+
+    .links{display:flex;flex-wrap:wrap;gap:10px}
+
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;text-decoration:none;background:#f3f4f6;border:1px solid #ececec;color:#111;font-size:14px}
+
+    .btn.primary{background:linear-gradient(90deg,var(--accent),#6c5ce7);color:white;border:0}
+
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+
+    .small{font-size:13px;color:var(--muted)}
+
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+
+    #qrcode{margin:12px auto 0;width:160px}
+
+    .actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+
+    @media(max-width:520px){.contact-grid{grid-template-columns:1fr}}
+
   </style>
+
 </head>
+
 <body>
-<p class="p1">&lt;!doctype html&gt;</p>
-<p class="p1">&lt;html lang="zh-CN"&gt;</p>
-<p class="p1">&lt;head&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;电子名片 — YOUR_FULL_NAME&lt;/title&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>:root{--bg:#f7f7fb;--card:#ffffff;--accent:#0b6efd;--muted:#6b7280}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>body{font-family:system-ui,-apple-system,"Segoe UI","Noto Sans CJK SC",Roboto,Arial; margin:0; background:var(--bg); color:#111}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:720px;margin:36px auto;padding:20px;}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.card{background:var(--card);border-radius:14px;padding:20px;box-shadow:0 6px 24px rgba(15,23,42,0.06)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.top{display:flex;gap:16px;align-items:center}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.avatar{width:84px;height:84px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#6c5ce7);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0;font-size:20px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.title{color:var(--muted);font-size:14px;margin-top:6px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.bio{margin:14px 0 18px;color:#222;line-height:1.45}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.links{display:flex;flex-wrap:wrap;gap:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn{display:inline-flex;align-items:center;gap:8px;padding:10px 12px;border-radius:10px;text-decoration:none;background:#f3f4f6;border:1px solid #ececec;color:#111;font-size:14px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.btn.primary{background:linear-gradient(90deg,var(--accent),#6c5ce7);color:white;border:0}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.small{font-size:13px;color:var(--muted)}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>#qrcode{margin:12px auto 0;width:160px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}</p>
-<p class="p1"><span class="Apple-converted-space">    </span>@media(max-width:520px){.contact-grid{grid-template-columns:1fr}}</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
-<p class="p1">&lt;/head&gt;</p>
-<p class="p1">&lt;body&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="card" id="card"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="top"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="avatar" id="avatar"&gt;YK&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="flex:1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;h1 id="fullName"&gt;YOUR_FULL_NAME&lt;/h1&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="title" id="role"&gt;YOUR_TITLE • YOUR_ORG&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small" id="location"&gt;YOUR_LOCATION&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="text-align:right"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;a class="btn" id="websiteLink" href="#" target="_blank" rel="noopener"&gt;🔗 网站&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;p class="bio" id="bio"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>在这里写一段简短的个人简介，1-2 行即可。比如研究方向、当前职位、联系方式说明等。</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/p&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="contact-grid"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small"&gt;📞 电话&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;a id="telLink" class="btn" href="tel:+821012345678"&gt;+82 10-1234-5678&lt;/a&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small"&gt;✉️ 邮箱&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;a id="emailLink" class="btn" href="mailto:you@example.com"&gt;you@example.com&lt;/a&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small"&gt;🐙 GitHub&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;a id="githubLink" class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener"&gt;github.com/YOUR_GITHUB&lt;/a&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small"&gt;🔗 LinkedIn&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div&gt;&lt;a id="linkedinLink" class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener"&gt;linkedin.com/in/YOUR_LINKEDIN&lt;/a&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div style="grid-column:1 / -1"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="small"&gt;📁 其他链接&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="links" id="otherLinks"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;!-- 可以放更多按钮 --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener"&gt;Google Scholar&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">            </span>&lt;a class="btn" href="https://YOUR-PERSONAL-SITE" target="_blank" rel="noopener"&gt;个人主页&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="actions" style="margin-top:14px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="downloadVcard" class="btn primary"&gt;📇 导出/保存到通讯录 (vCard)&lt;/button&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a id="rawVcard" class="btn" download="contact.vcf" href="#"&gt;直接下载 .vcf&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;a id="shareBtn" class="btn" href="#" onclick="navigator.share &amp;&amp; navigator.share({title:document.title, url:location.href}).catch(()=&gt;{});return false;"&gt;📤 分享此卡片&lt;/a&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="text-align:center;margin-top:18px"&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="small"&gt;扫描二维码用手机打开此页面&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div id="qrcode"&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="small" style="margin-top:8px;color:var(--muted)"&gt;或访问：&lt;span id="shortUrl"&gt;—&lt;/span&gt;&lt;/div&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>提示：在 iPhone/Safari 下点击“导出/保存到通讯录”后系统会提示直接添加联系人；Android 会下载 .vcf 文件，打开后可导入通讯录。</p>
-<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;!-- QRCode.js (CDN) --&gt;</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"&gt;&lt;/script&gt;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 在这里填写你的信息（替换占位符） ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const profile = {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>fullName: "YOUR_FULL_NAME",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>givenName: "YOUR_GIVEN_NAME", // 名 (可选)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>familyName: "YOUR_FAMILY_NAME", // 姓 (可选)</p>
-<p class="p1"><span class="Apple-converted-space">      </span>org: "YOUR_ORG",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>title: "YOUR_TITLE",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>tel: "+821012345678",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>email: "you@example.com",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>website: "https://YOUR_PERSONAL_SITE",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>github: "https://github.com/YOUR_GITHUB",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>location: "Seoul, Korea",</p>
-<p class="p1"><span class="Apple-converted-space">      </span>note: "研究 &amp; 开发 | 联系请注明来意"</p>
-<p class="p1"><span class="Apple-converted-space">    </span>};</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 页面填充 ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('fullName').textContent = profile.fullName;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('role').textContent = (profile.title || "") + (profile.org ? (" • " + profile.org) : "");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('location').textContent = profile.location || "";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('bio').textContent = profile.note || "";</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('avatar').textContent = (profile.givenName ? profile.givenName[0] : profile.fullName[0]) + (profile.familyName ? profile.familyName[0] : "");</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('websiteLink').href = profile.website;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('telLink').href = "tel:" + profile.tel;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('telLink').textContent = profile.tel;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('emailLink').href = "mailto:" + profile.email;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('emailLink').textContent = profile.email;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('githubLink').href = profile.github;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('linkedinLink').href = profile.linkedin;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 生成 vCard 字符串 ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function makeVCard(p) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>// vCard 3.0 简单示例</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const lines = [</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"BEGIN:VCARD",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"VERSION:3.0",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>`N:${p.familyName || ""};${p.givenName || ""};;;`,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>`FN:${p.fullName}`,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.org ? `ORG:${p.org}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.title ? `TITLE:${p.title}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.tel ? `TEL;TYPE=CELL:${p.tel}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.email ? `EMAIL;TYPE=INTERNET:${p.email}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.website ? `URL:${p.website}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.location ? `LABEL:${p.location}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>p.note ? `NOTE:${p.note}` : "",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>"END:VCARD"</p>
-<p class="p1"><span class="Apple-converted-space">      </span>].filter(Boolean).join("\r\n");</p>
-<p class="p1"><span class="Apple-converted-space">      </span>return lines;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 创建并设置下载链接（data URL） ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function vCardDataUrl(vcardStr) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>// encodeURIComponent 可确保特殊字符安全</p>
-<p class="p1"><span class="Apple-converted-space">      </span>return "data:text/vcard;charset=utf-8," + encodeURIComponent(vcardStr);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const vcardStr = makeVCard(profile);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>const downloadLink = document.getElementById('rawVcard');</p>
-<p class="p1"><span class="Apple-converted-space">    </span>downloadLink.href = vCardDataUrl(vcardStr);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>downloadLink.setAttribute('download', (profile.fullName || "contact") + ".vcf");</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 绑定导出按钮（更友好的触发：创建 Blob 并触发下载） ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('downloadVcard').addEventListener('click', function(){</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const blob = new Blob([vcardStr], {type: "text/vcard;charset=utf-8"});</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const url = URL.createObjectURL(blob);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const a = document.createElement('a');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>a.href = url;</p>
-<p class="p1"><span class="Apple-converted-space">      </span>a.download = (profile.fullName || "contact") + ".vcf";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>document.body.appendChild(a);</p>
-<p class="p1"><span class="Apple-converted-space">      </span>a.click();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>a.remove();</p>
-<p class="p1"><span class="Apple-converted-space">      </span>URL.revokeObjectURL(url);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>});</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// ====== 生成二维码，内容为当前页面的 URL ======</p>
-<p class="p1"><span class="Apple-converted-space">    </span>function makeQRCode(text) {</p>
-<p class="p1"><span class="Apple-converted-space">      </span>const container = document.getElementById('qrcode');</p>
-<p class="p1"><span class="Apple-converted-space">      </span>container.innerHTML = "";</p>
-<p class="p1"><span class="Apple-converted-space">      </span>new QRCode(container, {</p>
-<p class="p1"><span class="Apple-converted-space">        </span>text: text,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>width: 160,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>height: 160,</p>
-<p class="p1"><span class="Apple-converted-space">        </span>colorDark : "#000000",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>colorLight : "#ffffff",</p>
-<p class="p1"><span class="Apple-converted-space">        </span>correctLevel : QRCode.CorrectLevel.H</p>
-<p class="p1"><span class="Apple-converted-space">      </span>});</p>
-<p class="p1"><span class="Apple-converted-space">    </span>}</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>const currUrl = location.href;</p>
-<p class="p1"><span class="Apple-converted-space">    </span>makeQRCode(currUrl);</p>
-<p class="p1"><span class="Apple-converted-space">    </span>document.getElementById('shortUrl').textContent = currUrl;</p>
-<p class="p2"><br></p>
-<p class="p1"><span class="Apple-converted-space">    </span>// 如果你想把二维码导出为图片，可以在此加按钮并使用 canvas -&gt; toDataURL</p>
-<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
-<p class="p1">&lt;/body&gt;</p>
-<p class="p1">&lt;/html&gt;</p>
+
+  <div class="wrap">
+
+    <div class="card" id="card">
+
+      <div class="top">
+
+        <div class="avatar" id="avatar">YK</div>
+
+        <div style="flex:1">
+
+          <h1 id="fullName">YOUR_FULL_NAME</h1>
+
+          <div class="title" id="role">YOUR_TITLE • YOUR_ORG</div>
+
+          <div class="small" id="location">YOUR_LOCATION</div>
+
+        </div>
+
+        <div style="text-align:right">
+
+          <a class="btn" id="websiteLink" href="#" target="_blank" rel="noopener">🔗 网站</a>
+
+        </div>
+
+      </div>
+
+
+
+      <p class="bio" id="bio">
+
+        在这里写一段简短的个人简介，1-2 行即可。比如研究方向、当前职位、联系方式说明等。
+
+      </p>
+
+
+
+      <div class="contact-grid">
+
+        <div>
+
+          <div class="small">📞 电话</div>
+
+          <div><a id="telLink" class="btn" href="tel:+821012345678">+82 10-1234-5678</a></div>
+
+        </div>
+
+        <div>
+
+          <div class="small">✉️ 邮箱</div>
+
+          <div><a id="emailLink" class="btn" href="mailto:you@example.com">you@example.com</a></div>
+
+        </div>
+
+
+
+        <div>
+
+          <div class="small">🐙 GitHub</div>
+
+          <div><a id="githubLink" class="btn" href="https://github.com/YOUR_GITHUB" target="_blank" rel="noopener">github.com/YOUR_GITHUB</a></div>
+
+        </div>
+
+        <div>
+
+          <div class="small">🔗 LinkedIn</div>
+
+          <div><a id="linkedinLink" class="btn" href="https://www.linkedin.com/in/YOUR_LINKEDIN" target="_blank" rel="noopener">linkedin.com/in/YOUR_LINKEDIN</a></div>
+
+        </div>
+
+
+
+        <div style="grid-column:1 / -1">
+
+          <div class="small">📁 其他链接</div>
+
+          <div class="links" id="otherLinks">
+
+            <!-- 可以放更多按钮 -->
+
+            <a class="btn" href="https://scholar.google.com" target="_blank" rel="noopener">Google Scholar</a>
+
+            <a class="btn" href="https://YOUR-PERSONAL-SITE" target="_blank" rel="noopener">个人主页</a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+      <div class="actions" style="margin-top:14px">
+
+        <button id="downloadVcard" class="btn primary">📇 导出/保存到通讯录 (vCard)</button>
+
+        <a id="rawVcard" class="btn" download="contact.vcf" href="#">直接下载 .vcf</a>
+
+        <a id="shareBtn" class="btn" href="#" onclick="navigator.share && navigator.share({title:document.title, url:location.href}).catch(()=>{});return false;">📤 分享此卡片</a>
+
+      </div>
+
+
+
+      <div style="text-align:center;margin-top:18px">
+
+        <div class="small">扫描二维码用手机打开此页面</div>
+
+        <div id="qrcode"></div>
+
+        <div class="small" style="margin-top:8px;color:var(--muted)">或访问：<span id="shortUrl">—</span></div>
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <footer>
+
+      提示：在 iPhone/Safari 下点击“导出/保存到通讯录”后系统会提示直接添加联系人；Android 会下载 .vcf 文件，打开后可导入通讯录。
+
+    </footer>
+
+  </div>
+
+
+
+  <!-- QRCode.js (CDN) -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+
+
+  <script>
+
+    // ====== 在这里填写你的信息（替换占位符） ======
+
+    const profile = {
+
+      fullName: "YOUR_FULL_NAME",
+
+      givenName: "YOUR_GIVEN_NAME", // 名 (可选)
+
+      familyName: "YOUR_FAMILY_NAME", // 姓 (可选)
+
+      org: "YOUR_ORG",
+
+      title: "YOUR_TITLE",
+
+      tel: "+821012345678",
+
+      email: "you@example.com",
+
+      website: "https://YOUR_PERSONAL_SITE",
+
+      github: "https://github.com/YOUR_GITHUB",
+
+      linkedin: "https://www.linkedin.com/in/YOUR_LINKEDIN",
+
+      location: "Seoul, Korea",
+
+      note: "研究 & 开发 | 联系请注明来意"
+
+    };
+
+
+
+    // ====== 页面填充 ======
+
+    document.getElementById('fullName').textContent = profile.fullName;
+
+    document.getElementById('role').textContent = (profile.title || "") + (profile.org ? (" • " + profile.org) : "");
+
+    document.getElementById('location').textContent = profile.location || "";
+
+    document.getElementById('bio').textContent = profile.note || "";
+
+    document.getElementById('avatar').textContent = (profile.givenName ? profile.givenName[0] : profile.fullName[0]) + (profile.familyName ? profile.familyName[0] : "");
+
+    document.getElementById('websiteLink').href = profile.website;
+
+    document.getElementById('telLink').href = "tel:" + profile.tel;
+
+    document.getElementById('telLink').textContent = profile.tel;
+
+    document.getElementById('emailLink').href = "mailto:" + profile.email;
+
+    document.getElementById('emailLink').textContent = profile.email;
+
+    document.getElementById('githubLink').href = profile.github;
+
+    document.getElementById('linkedinLink').href = profile.linkedin;
+
+
+
+    // ====== 生成 vCard 字符串 ======
+
+    function makeVCard(p) {
+
+      // vCard 3.0 简单示例
+
+      const lines = [
+
+        "BEGIN:VCARD",
+
+        "VERSION:3.0",
+
+        `N:${p.familyName || ""};${p.givenName || ""};;;`,
+
+        `FN:${p.fullName}`,
+
+        p.org ? `ORG:${p.org}` : "",
+
+        p.title ? `TITLE:${p.title}` : "",
+
+        p.tel ? `TEL;TYPE=CELL:${p.tel}` : "",
+
+        p.email ? `EMAIL;TYPE=INTERNET:${p.email}` : "",
+
+        p.website ? `URL:${p.website}` : "",
+
+        p.location ? `LABEL:${p.location}` : "",
+
+        p.note ? `NOTE:${p.note}` : "",
+
+        "END:VCARD"
+
+      ].filter(Boolean).join("\r\n");
+
+      return lines;
+
+    }
+
+
+
+    // ====== 创建并设置下载链接（data URL） ======
+
+    function vCardDataUrl(vcardStr) {
+
+      // encodeURIComponent 可确保特殊字符安全
+
+      return "data:text/vcard;charset=utf-8," + encodeURIComponent(vcardStr);
+
+    }
+
+
+
+    const vcardStr = makeVCard(profile);
+
+    const downloadLink = document.getElementById('rawVcard');
+
+    downloadLink.href = vCardDataUrl(vcardStr);
+
+    downloadLink.setAttribute('download', (profile.fullName || "contact") + ".vcf");
+
+
+
+    // ====== 绑定导出按钮（更友好的触发：创建 Blob 并触发下载） ======
+
+    document.getElementById('downloadVcard').addEventListener('click', function(){
+
+      const blob = new Blob([vcardStr], {type: "text/vcard;charset=utf-8"});
+
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement('a');
+
+      a.href = url;
+
+      a.download = (profile.fullName || "contact") + ".vcf";
+
+      document.body.appendChild(a);
+
+      a.click();
+
+      a.remove();
+
+      URL.revokeObjectURL(url);
+
+    });
+
+
+
+    // ====== 生成二维码，内容为当前页面的 URL ======
+
+    function makeQRCode(text) {
+
+      const container = document.getElementById('qrcode');
+
+      container.innerHTML = "";
+
+      new QRCode(container, {
+
+        text: text,
+
+        width: 160,
+
+        height: 160,
+
+        colorDark : "#000000",
+
+        colorLight : "#ffffff",
+
+        correctLevel : QRCode.CorrectLevel.H
+
+      });
+
+    }
+
+
+
+    const currUrl = location.href;
+
+    makeQRCode(currUrl);
+
+    document.getElementById('shortUrl').textContent = currUrl;
+
+
+
+    // 如果你想把二维码导出为图片，可以在此加按钮并使用 canvas -> toDataURL
+
+  </script>
+
 </body>
+
 </html>
